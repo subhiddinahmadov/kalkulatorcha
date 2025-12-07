@@ -1,0 +1,88 @@
+/* Umumiy sozlash */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #333; /* Qora fon */
+    display: flex;
+    flex-direction: column; /* Elementlarni ustma-ust qo'yish uchun */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Shaxsiy imzo dizayni */
+.signature {
+    color: #fff; /* Matn rangi oq */
+    font-size: 3.5rem; /* Shrift o'lchamini kattalashtirish (35 piksel) */
+    margin-bottom: 30px; /* Kalkulyatordan pastroqda bo'sh joy */
+    font-family: sans-serif; /* O'qishga oson shrift */
+    text-align: center; /* Markazga tekislash */
+}
+
+/* Kalkulyator asosiy qutisi */
+.calculator {
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 400px;
+}
+
+/* Ekran (Display) */
+.calculator-screen {
+    width: 100%;
+    height: 100px;
+    background-color: #fff; /* Oq ekran */
+    border: none;
+    text-align: right;
+    padding: 0 20px;
+    font-size: 5.2rem;
+    color: #000;
+}
+
+/* Tugmalar */
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 ustun (foiz qo'shilgani uchun) */
+    grid-gap: 1px;
+    background-color: #000; /* Tugmalar orasini qora qilish */
+    padding: 10px;
+}
+
+.calculator-keys button {
+    height: 60px;
+    background-color: #f0f0f0; /* Tugmalar rangi - oqroq */
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #000;
+    transition: background-color 0.1s;
+}
+
+.calculator-keys button:hover {
+    background-color: #ccc; /* Hover effekti */
+}
+
+/* Operatorlar */
+.operator {
+    background-color: #e0e0e0 !important;
+    color: #333 !important;
+}
+
+.equal-sign {
+    background-color: #5cb85c !important; /* Tenglik uchun yashilroq */
+    grid-column: span 2; /* Ikkita ustunni egallash */
+}
+
+.equal-sign:hover {
+    background-color: #4cae4c !important;
+}
